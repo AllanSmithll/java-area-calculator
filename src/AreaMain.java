@@ -1,6 +1,5 @@
 // 31/01/2023
 // Projeto de cálculo de áreas feito por Allan Amâncio
-package main;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Locale;
@@ -54,28 +53,28 @@ public class AreaMain {
                 option = sc.nextInt();
                 
                 if (option == 1 ) {
-                	System.out.print("Base > ");
+                	System.out.println("Enter the measures of triangle (sides): ");
             		x.sideABase = sc.nextDouble();
-            		System.out.print("Height > ");
-            		x.height = sc.nextDouble();
+            		x.sideB = sc.nextDouble();
+					x.sideC = sc.nextDouble();
             		
-            		double areaTriangle = (x.sideABase * x.height) / 2;
+            		double areaTriangle = x.area();
             		System.out.printf("The area of Triangle is %.3fm²%n", areaTriangle);
                 }
                 
                 else if (option == 2) {
-                	System.out.print("What is the value of the side? ");
+                	System.out.print("What is the value of the sides? ");
                 	y.sideA = sc.nextDouble();
                 	
-                	double areaSquare = Math.pow(y.sideA, 2);
+                	double areaSquare = y.area();
                 	System.out.printf("The area of the Square is %.3fm²%n", areaSquare);
                 }
                 
                 else if (option == 3) {
                 	System.out.print("What is the circle's radius? ");
                 	z.radius = sc.nextDouble(); 
-                	
-                	double areaCircle = 3.14 * z.radius;
+
+                	double areaCircle = z.area();
                 	System.out.printf("The area of the Circle is %.3fm²%n", areaCircle);
                 }
                 
@@ -85,7 +84,7 @@ public class AreaMain {
                 	System.out.print("Height > ");
                 	a.sideCHeight = sc.nextDouble();
                 	
-                	double areaRectangle = a.sideABase * a.sideCHeight;
+                	double areaRectangle = a.area();
                 	System.out.printf("The area of the Rectangle is %.3fm²%n", areaRectangle);
                 }
                 
@@ -114,7 +113,7 @@ public class AreaMain {
             }
             
             catch (InputMismatchException ex){
-                System.out.println("Please enter an double value between 0.001 and " + options.length + "meters.");
+                System.out.println("Please enter an double value between 1 and " + options.length + "options.");
                 sc.next();
             }
             catch (Exception ex){

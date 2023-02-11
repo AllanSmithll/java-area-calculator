@@ -7,5 +7,8 @@ public class Square {
 		public double sideB;
 		public double sideC;
 		public double sideD;
-		public double area;
+
+		public double area() {
+			return Math.pow(sideA, 2);
+		}
 }
