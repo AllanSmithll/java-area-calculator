@@ -6,5 +6,8 @@ public class Trapeze {
 	public double sideA;
 	public double sideB;
 	public double height;
-	public double area;
+
+	public double area() {
+		return ((baseLarger + baseSmaller) * height) / 2;
+	}
 }

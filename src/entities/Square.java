@@ -8,6 +8,9 @@ public class Square {
 		public double sideC;
 		public double sideD;
 
+		/**
+		 * @return Square's area
+		 */
 		public double area() {
 			return Math.pow(sideA, 2);
 		}

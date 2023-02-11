@@ -65,7 +65,7 @@ public class AreaMain {
                 else if (option == 2) {
                 	System.out.print("What is the value of the sides? ");
                 	y.sideA = sc.nextDouble();
-                	
+
                 	double areaSquare = y.area();
                 	System.out.printf("The area of the Square is %.3fm²%n", areaSquare);
                 }
@@ -83,7 +83,7 @@ public class AreaMain {
                 	a.sideABase = sc.nextDouble();
                 	System.out.print("Height > ");
                 	a.sideCHeight = sc.nextDouble();
-                	
+
                 	double areaRectangle = a.area();
                 	System.out.printf("The area of the Rectangle is %.3fm²%n", areaRectangle);
                 }
@@ -93,8 +93,8 @@ public class AreaMain {
                 	b.largerDiagonal = sc.nextDouble();
                 	System.out.print("Smaller diagonal > ");
                 	b.smallerDiagonal = sc.nextDouble();
-                	
-                	double areaRhombus = (b.largerDiagonal * b.smallerDiagonal) / 2;
+
+                	double areaRhombus = b.area();
                 	System.out.printf("The area of the Rhombus is %.3fm²%n", areaRhombus);
                 }
                 
@@ -106,7 +106,7 @@ public class AreaMain {
                 	System.out.print("Height > ");
                 	c.height = sc.nextDouble();
                 	
-                	double areaTrapeze = ((c.baseLarger + c.baseSmaller) * c.height) / 2;
+                	double areaTrapeze = c.area();
                 	System.out.printf("The area of the Trapeze is %.3fm²%n", areaTrapeze);
                 }
                 	

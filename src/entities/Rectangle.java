@@ -6,6 +6,9 @@ public class Rectangle {
 	public double sideCHeight;
 	public double sideDHeight;
 
+	/**
+	 * @return Rectangle's area
+	 */
 	public double area() {
 		return sideABase * sideCHeight;
 	}

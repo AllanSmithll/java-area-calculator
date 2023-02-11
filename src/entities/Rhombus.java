@@ -7,5 +7,11 @@ public class Rhombus {
 	public double sideD;
 	public double largerDiagonal;
 	public double smallerDiagonal;
-	public double area;
+
+	/**
+	 * @return Rhombus's area
+	 */
+	public double area() {
+		return (largerDiagonal * smallerDiagonal) / 2;
+	}
 }
